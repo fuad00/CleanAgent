@@ -6,3 +6,4 @@ autogen[retrievechat]
 pandas
 matplotlib
 flaml[automl]
+dataprep
