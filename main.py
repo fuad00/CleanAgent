@@ -86,14 +86,14 @@ async def on_chat_start():
     await cl.Message(content=return_content).send()
         
     actions_show_table = [
-        cl.Action(name="Show Uploaded Table", value="example_value", description="Click me!")
+        cl.Action(name="Show Uploaded Table", value="example_value", description="Click me!", payload={"key": "value"})
     ]
 
     await cl.Message(content="Click this action button to show the uploaded table:", actions=actions_show_table).send()
 
 
     actions_start_standardization = [
-        cl.Action(name="Start Standardization", value="example_value", description="Click me!")
+        cl.Action(name="Start Standardization", value="example_value", description="Click me!", payload={"key": "value"})
     ]
 
     await cl.Message(content=f"Start automatic data stardardization with this action button:", actions=actions_start_standardization).send()
@@ -107,13 +107,13 @@ async def on_action(action: cl.Action):
     await cl.Message(content=f"Data Standardization Completed!").send()
 
     actions_show_uploaded_table= [
-        cl.Action(name="Show Uploaded Table", value="example_value", description="Click me!")
+        cl.Action(name="Show Uploaded Table", value="example_value", description="Click me!", payload={"key": "value"})
     ]
 
     await cl.Message(content=f"Click this action button to show the uploaded table:", actions=actions_show_uploaded_table).send()
 
     actions_show_cleaned_table= [
-        cl.Action(name="Show Cleaned Table", value="example_value", description="Click me!")
+        cl.Action(name="Show Cleaned Table", value="example_value", description="Click me!", payload={"key": "value"})
     ]
 
     await cl.Message(content=f"Click this action button to show the cleaned table:", actions=actions_show_cleaned_table).send()
@@ -150,12 +150,12 @@ async def recieve_user_requirement(message: cl.Message):
 
   await cl.Message(content=f"Data Standardization Completed!").send()
   actions_show_uploaded_table= [
-      cl.Action(name="Show Uploaded Table", value="example_value", description="Click me!")
+      cl.Action(name="Show Uploaded Table", value="example_value", description="Click me!", payload={"key": "value"})
   ]
   
   await cl.Message(content=f"Click this action button to show the uploaded table:", actions=actions_show_uploaded_table).send()
   actions_show_cleaned_table= [
-      cl.Action(name="Show Cleaned Table", value="example_value", description="Click me!")
+      cl.Action(name="Show Cleaned Table", value="example_value", description="Click me!", payload={"key": "value"})
   ]
   await cl.Message(content=f"Click this action button to show the cleaned table:", actions=actions_show_cleaned_table).send()
 
